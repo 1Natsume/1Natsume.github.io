@@ -27,7 +27,7 @@ ul{
   background-position: center;
   background-attachment: fixed; /* 背景图片固定 */
   min-height: 100vh; /* 至少为视口高度 */
-  
+  z-index: -1;
 }
 .aa{
     position: fixed;
