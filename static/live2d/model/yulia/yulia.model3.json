@@ -1,0 +1,54 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "yulia.moc3",
+		"Textures": [
+			"yulia.1024/texture_00.png",
+			"yulia.1024/texture_01.png"
+		],
+		"DisplayInfo": "yulia.cdi3.json",
+		"Motions": {
+			"TapBody": [
+				{
+					"File": "motions/shengqi.motion3.json"
+				},
+        {
+					"File": "motions/lenxiao.motion3.json"
+				},
+        {
+					"File": "motions/kuku.motion3.json"
+				}
+			],
+      "TapTest": [
+        {
+					"File": "motions/haixiu.motion3.json"
+				},
+        {
+					"File": "motions/tutou.motion3.json"
+				}
+      ]
+		}
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": [
+				"ParamEyeLOpen",
+				"ParamEyeROpen"
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		}
+	],
+	"HitAreas": [
+		{
+			"Id": "ArtMesh54",
+			"Name": "Body"
+		},
+		{"Name":"Test", "Id":"ArtMesh61"}
+	]
+}

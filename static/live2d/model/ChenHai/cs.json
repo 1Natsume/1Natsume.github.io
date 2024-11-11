@@ -1,0 +1,816 @@
+      {
+          "Name": "XW",
+          "File": "/motions/FileReferences_Motions_Start_1_File_0.json",
+          "Sound": "/sounds/FileReferences_Motions_Start_1_Sound_0.mp3",
+          "Text": "如约而至了呢，指挥官，欢迎~对这里的装潢还满意否？",
+          "TextDelay": 5000,
+          "FadeIn": 0,
+          "FadeOut": 0,
+          "Command": "physics disable;mouse_tracking disable;eye_blink enforce;lip_sync enforce",
+          "PostCommand": "eye_blink enable;lip_sync enable;physics enable",
+          "VarFloats": [{ "Name": "var_start", "Type": 1, "Code": "equal 0" }]
+        },
+        {
+          "Name": "登录台词login",
+          "Sound": "FileReferences_Motions_Start_2_Sound_0.mp3",
+          "Text": "港区运转时，决策的位置怎么能空着呢？快点回到你的位置上吧。",
+          "FadeIn": 0,
+          "FadeOut": 0,
+          "Enabled": false
+        },
+        {
+          "Name": "登录台词login_ex1100",
+          "Sound": "FileReferences_Motions_Start_3_Sound_0.mp3",
+          "Text": "嗯，精神看起来不错。本想着还能欣赏一下你瞌睡的样子，可惜了呢。",
+          "FadeIn": 0,
+          "FadeOut": 0,
+          "Enabled": false
+        },
+        {
+          "Name": "回港台词home",
+          "Sound": "FileReferences_Motions_Start_4_Sound_0.mp3",
+          "Text": "平安回来了呢。刚刚的战斗很精彩，不过尚有一些细枝末节可以改进……来复个盘吧？",
+          "FadeIn": 0,
+          "FadeOut": 0,
+          "Enabled": false
+        },
+        {
+          "Name": "登录台词login_1",
+          "Sound": "FileReferences_Motions_Start_5_Sound_0.mp3",
+          "Text": "既来之，则安之。指挥官，放心吧，我不会亏待你的。",
+          "FadeIn": 0,
+          "FadeOut": 0,
+          "Enabled": false
+        },
+        {
+          "Name": "回港台词home_1",
+          "Sound": "FileReferences_Motions_Start_6_Sound_0.mp3",
+          "Text": "“嗯，好的，我知道了，就这么安排吧。”哎呀，欢迎回来。刚刚的通话内容……是秘密哦~",
+          "FadeIn": 0,
+          "FadeOut": 0,
+          "Enabled": false
+        },
+        {
+          "Name": "登录台词login_2",
+          "Sound": "FileReferences_Motions_Start_7_Sound_0.mp3",
+          "Text": "既然是休假，就暂时把各种决策和思索放下吧。休息够了，之后才能更好地施展谋略呢。",
+          "FadeIn": 0,
+          "FadeOut": 0,
+          "Enabled": false
+        },
+        {
+          "Name": "回港台词home_2",
+          "Sound": "FileReferences_Motions_Start_8_Sound_0.mp3",
+          "Text": "看你大汗淋漓的样子，想必是被酷暑折磨得不轻了吧？快来好好乘个凉吧。",
+          "FadeIn": 0,
+          "FadeOut": 0,
+          "Enabled": false
+        }
+      ,
+      "Idle#1": [
+        {
+          "Name": "effect",
+          "File": "/motions/FileReferences_Motions_Idle#1_0_File_0.json",
+          "FadeIn": 0,
+          "FadeOut": 0
+        }
+      ],
+      "IdleVoice": [
+        {
+          "Name": "任务提醒task",
+          "Sound": "FileReferences_Motions_IdleVoice_0_Sound_0.mp3",
+          "Text": "不要忘了那些未完成的细碎事务，等跌倒时才想起来的话可就晚了哦。"
+        },
+        {
+          "Name": "任务提醒task_ex1100",
+          "Sound": "FileReferences_Motions_IdleVoice_1_Sound_0.mp3",
+          "Text": "即使是圣人，也难以算无遗策，比如说……喏，你似乎有任务忘记完成了。"
+        },
+        {
+          "Name": "任务完成mission_complete",
+          "Sound": "FileReferences_Motions_IdleVoice_2_Sound_0.mp3",
+          "Text": "任务完成了。扫清了障碍之后，你的下一步会怎么走?"
+        },
+        {
+          "Name": "邮件提醒mail",
+          "Sound": "FileReferences_Motions_IdleVoice_3_Sound_0.mp3",
+          "Text": "放任关键的信息不管，可不是优秀指挥官的所为呢。"
+        },
+        {
+          "Name": "委托完成expedition",
+          "Sound": "FileReferences_Motions_IdleVoice_4_Sound_0.mp3",
+          "Text": "委托队归港了么……积累后备物资，充实仓库，给自己多一张手牌，确实挺好的。"
+        },
+        {
+          "Name": "强化成功upgrade",
+          "Sound": "FileReferences_Motions_IdleVoice_5_Sound_0.mp3",
+          "Text": "虽然我更喜欢居于帷幕之后就是了。"
+        },
+        {
+          "Name": "任务提醒task_1",
+          "Sound": "FileReferences_Motions_IdleVoice_6_Sound_0.mp3",
+          "Text": "你现在是我的客人，分心考虑任务的事情可不好哦。"
+        },
+        {
+          "Name": "任务完成mission_complete_1",
+          "Sound": "FileReferences_Motions_IdleVoice_7_Sound_0.mp3",
+          "Text": "嗯？在我不知道的时候，任务已经完成了？挺能干的嘛，指挥官。"
+        },
+        {
+          "Name": "邮件提醒mail_1",
+          "Sound": "FileReferences_Motions_IdleVoice_8_Sound_0.mp3",
+          "Text": "这种时候还有新的邮件送来么……有些不解风情呢。"
+        }
+      ],
+      "Set_Function": [
+        {
+          "Name": "Fun",
+          "Text": "[ - 功能面板 - ]{$br}{$br}- [ 当前好感度：{$intimacy} ] -",
+          "Choices": [
+            { "Text": "- 待机音效 -", "NextMtn": "Switch_Idlevoice:XW" },
+            { "Text": "- 场景设定 -", "NextMtn": "Switch_Backdrop:XW" },
+            { "Text": "- 和谐涩涩 -", "NextMtn": "Cos_Henshin:XW" },
+            { "Text": "- 演示视频 -", "NextMtn": "Video_Explain:XW" },
+            { "Text": "- 动作鉴赏 -", "NextMtn": "Show_Animation:XW" },
+            { "Text": "- 制作认证 -", "NextMtn": "Credit_Xmallwei:XW" }
+          ],
+          "Command": "start_mtn Bgm_Musical:音效选择"
+        }
+      ],
+      "Bgm_Musical": [
+        {
+          "Name": "音效选择",
+          "Sound": "FileReferences_Motions_Bgm_Musical_0_Sound_0.mp3",
+          "SoundChannel": 2
+        },
+        {
+          "Name": "音效确定",
+          "Sound": "FileReferences_Motions_Bgm_Musical_1_Sound_0.mp3",
+          "SoundChannel": 2
+        },
+        {
+          "Name": "音效取消",
+          "Sound": "FileReferences_Motions_Bgm_Musical_2_Sound_0.mp3",
+          "SoundChannel": 2
+        },
+        {
+          "Name": "音效错误",
+          "Sound": "FileReferences_Motions_Bgm_Musical_3_Sound_0.mp3",
+          "SoundChannel": 2
+        },
+        {
+          "Name": "发现彩蛋",
+          "Sound": "FileReferences_Motions_Bgm_Musical_4_Sound_0.ogg",
+          "SoundChannel": 2,
+          "Text": "- [ 发现彩蛋！好感度+999 ] -",
+          "Intimacy": { "Bonus": 999 }
+        }
+      ],
+      "Cos_Henshin": [
+        {
+          "Name": "XW",
+          "Sound": "FileReferences_Motions_Cos_Henshin_0_Sound_0.ogg",
+          "SoundChannel": 2,
+          "Text": "\"所有涩涩功能已设置于场景中\"{$br}\"What You See is What You Get\""
+        },
+        {
+          "Name": "NULL",
+          "Text": "【无内容】",
+          "Command": "start_mtn Bgm_Musical:音效错误"
+        },
+        {
+          "Name": "001",
+          "SoundChannel": 2,
+          "Text": "【已切换】",
+          "Command": "start_mtn Bgm_Musical:音效确定;change_cos [M]Erato.model3.json"
+        },
+        {
+          "Name": "002",
+          "SoundChannel": 2,
+          "Text": "【已切换】",
+          "Command": "start_mtn Bgm_Musical:音效确定;change_cos [M]Erato2.model3.json"
+        }
+      ],
+      "Video_Explain": [
+        {
+          "Name": "XW",
+          "Text": "【已跳转】",
+          "Command": "open_url https://www.bilibili.com/video/BV1Y84y1B7Ur/"
+        },
+        {
+          "Name": "NULL",
+          "Text": "【无内容】",
+          "Command": "start_mtn Bgm_Musical:音效错误"
+        }
+      ],
+      "Credit_Xmallwei": [
+        {
+          "Name": "XW",
+          "Text": "[ - Credit with Dr.Wade - ]",
+          "Choices": [
+            {
+              "Text": "- 前往个人B站页 -",
+              "NextMtn": "Credit_Xmallwei:主页B站"
+            },
+            {
+              "Text": "- 前往个人S站页 -",
+              "NextMtn": "Credit_Xmallwei:主页S站"
+            },
+            { "Text": "- 返回 -", "NextMtn": "Credit_Xmallwei:返回" }
+          ],
+          "Command": "start_mtn Bgm_Musical:音效选择"
+        },
+        {
+          "Name": "NULL",
+          "Text": "【无内容】",
+          "Command": "start_mtn Bgm_Musical:音效错误"
+        },
+        {
+          "Name": "主页B站",
+          "Text": "【已传送】",
+          "Command": "open_url https://space.bilibili.com/341957227;start_mtn Bgm_Musical:音效确定"
+        },
+        {
+          "Name": "主页S站",
+          "Text": "【已传送】",
+          "Command": "open_url https://steamcommunity.com/profiles/76561199137894344;start_mtn Bgm_Musical:音效确定"
+        },
+        { "Name": "返回", "Command": "start_mtn Bgm_Musical:音效取消" }
+      ],
+      "Show_Animation": [
+        {
+          "Name": "XW",
+          "Text": "[ - 动作鉴赏 - ]",
+          "Choices": [
+            {
+              "Text": "- 开场动画/Login -",
+              "NextMtn": "Show_Animation:开场_login"
+            },
+            {
+              "Text": "- 触摸动画/touch_1 -",
+              "NextMtn": "Show_Animation:左脚_touch_1"
+            },
+            {
+              "Text": "- 触摸动画/touch_1ex -",
+              "NextMtn": "Show_Animation:领口_touch_1ex"
+            },
+            {
+              "Text": "- 触摸动画/touch_2ex -",
+              "NextMtn": "Show_Animation:欧派_touch_2_ex1100"
+            },
+            {
+              "Text": "- 触摸动画/touch_h -",
+              "NextMtn": "Show_Animation:右手_touch_head_1"
+            },
+            {
+              "Text": "- 誓约动画/wedding -",
+              "NextMtn": "Show_Animation:左手_wedding"
+            }
+          ],
+          "Command": "start_mtn Bgm_Musical:音效选择"
+        },
+        {
+          "Name": "开场_login",
+          "File": "FileReferences_Motions_Start_1_File_0.json",
+          "Sound": "FileReferences_Motions_Start_1_Sound_0.mp3",
+          "Text": "如约而至了呢，指挥官，欢迎~对这里的装潢还满意否？",
+          "TextDelay": 6000,
+          "FadeIn": 0,
+          "FadeOut": 0,
+          "Command": "stop_mtn;physics disable;eye_blink disable;lip_sync enforce;motions disable Idle",
+          "PostCommand": "physics enable;eye_blink enable;lip_sync enable;motions enable Idle"
+        },
+        {
+          "Name": "左脚_touch_1",
+          "File": "FileReferences_Motions_Show_Animation_2_File_0.json",
+          "Sound": "FileReferences_Motions_TapTouchBreast_0_Sound_0.mp3",
+          "Text": "有什么事？你该不会……只是想和我闲聊吧。",
+          "FadeIn": 0,
+          "FadeOut": 0,
+          "Command": "stop_mtn;physics disable;eye_blink disable;lip_sync enforce;motions disable Idle",
+          "PostCommand": "physics enable;eye_blink enable;lip_sync enable;motions enable Idle"
+        },
+        {
+          "Name": "领口_touch_1ex",
+          "File": "FileReferences_Motions_Show_Animation_3_File_0.json",
+          "Sound": "FileReferences_Motions_TapTouchBreast_1_Sound_0.mp3",
+          "Text": "就算只是闲聊，只要是与你一起，这枯燥的时间便被点缀上了几分色彩。",
+          "FadeIn": 0,
+          "FadeOut": 0,
+          "Command": "stop_mtn;physics disable;eye_blink disable;lip_sync enforce;motions disable Idle",
+          "PostCommand": "physics enable;eye_blink enable;lip_sync enable;motions enable Idle"
+        },
+        {
+          "Name": "欧派_touch_2_ex1100",
+          "File": "FileReferences_Motions_Show_Animation_4_File_0.json",
+          "Sound": "FileReferences_Motions_TapTouchBreast_3_Sound_0.mp3",
+          "Text": "看来有必要给你一点“特别关照”了呢。",
+          "FadeIn": 0,
+          "FadeOut": 0,
+          "Command": "stop_mtn;physics disable;eye_blink disable;lip_sync enforce;motions disable Idle",
+          "PostCommand": "physics enable;eye_blink enable;lip_sync enable;motions enable Idle"
+        },
+        {
+          "Name": "右手_touch_head_1",
+          "File": "FileReferences_Motions_Show_Animation_5_File_0.json",
+          "Sound": "FileReferences_Motions_TapTouchHead_1_Sound_0.mp3",
+          "Text": "“反客为主”可不行哦。",
+          "FadeIn": 0,
+          "FadeOut": 0,
+          "Command": "stop_mtn;physics disable;eye_blink disable;lip_sync enforce;motions disable Idle",
+          "PostCommand": "physics enable;eye_blink enable;lip_sync enable;motions enable Idle"
+        },
+        {
+          "Name": "左手_wedding",
+          "File": "FileReferences_Motions_Show_Animation_6_File_0.json",
+          "Sound": "FileReferences_Motions_Show_Animation_6_Sound_0.mp3",
+          "Text": "这是……呵呵，没想到被指挥官突然袭击了呢…不对，正因为是指挥官才能对我做到这点吧。这么一想，这也在我的预料之中…对吧？",
+          "FadeIn": 0,
+          "FadeOut": 0,
+          "Command": "stop_mtn;motions disable Idle;physics disable;eye_blink disable;lip_sync enforce",
+          "PostCommand": "physics enable;eye_blink enable;lip_sync enable;motions enable Idle"
+        }
+      ],
+      "Switch_Idlevoice": [
+        {
+          "Name": "XW",
+          "Text": "[ - 待机音效 - ]",
+          "Choices": [
+            {
+              "Text": "- 待机语音：开启/ONN -",
+              "NextMtn": "Switch_Idlevoice:待机开启"
+            },
+            {
+              "Text": "- 待机语音：关闭/OFF -",
+              "NextMtn": "Switch_Idlevoice:待机关闭"
+            }
+          ],
+          "Command": "start_mtn Bgm_Musical:音效选择"
+        },
+        {
+          "Name": "待机开启",
+          "Text": "【待机语音已开启】",
+          "Command": "start_mtn Bgm_Musical:音效确定",
+          "VarFloats": [{ "Name": "idlevoice", "Type": 2, "Code": "assign 0" }]
+        },
+        {
+          "Name": "待机关闭",
+          "Text": "【待机语音已关闭】",
+          "Command": "start_mtn Bgm_Musical:音效取消;stop_sound 0",
+          "VarFloats": [{ "Name": "idlevoice", "Type": 2, "Code": "assign 1" }]
+        }
+      ],
+      "Switch_Backdrop": [
+        {
+          "Name": "XW",
+          "Text": "[ - 背景设定 - ]",
+          "Choices": [
+            {
+              "Text": "- 背景环境：开启/ONN -",
+              "NextMtn": "Switch_Backdrop:背景开启"
+            },
+            {
+              "Text": "- 背景环境：关闭/OFF -",
+              "NextMtn": "Switch_Backdrop:背景关闭"
+            },
+            {
+              "Text": "- 登录动画：开启/ONN -",
+              "NextMtn": "Switch_Backdrop:开场开启"
+            },
+            {
+              "Text": "- 登录动画：关闭/OFF -",
+              "NextMtn": "Switch_Backdrop:开场关闭"
+            },
+            {
+              "Text": "- 鼠标追踪：开启/ONN -",
+              "NextMtn": "Switch_Backdrop:追踪开启"
+            },
+            {
+              "Text": "- 鼠标追踪：关闭/OFF -",
+              "NextMtn": "Switch_Backdrop:追踪关闭"
+            }
+          ],
+          "Command": "start_mtn Bgm_Musical:音效选择"
+        },
+        {
+          "Name": "NULL",
+          "Text": "【无内容】",
+          "Command": "start_mtn Bgm_Musical:音效错误"
+        },
+        {
+          "Name": "背景开启",
+          "Text": "【背景已开启】",
+          "Command": "start_mtn Bgm_Musical:音效确定;parameters lock Bg_Hide2 1"
+        },
+        {
+          "Name": "背景关闭",
+          "Text": "【背景已关闭】",
+          "Command": "start_mtn Bgm_Musical:音效取消;parameters lock Bg_Hide2 0"
+        },
+        {
+          "Name": "开场开启",
+          "Text": "【登录动画已开启】",
+          "Command": "start_mtn Bgm_Musical:音效确定",
+          "VarFloats": [{ "Name": "var_start", "Type": 2, "Code": "assign 0" }]
+        },
+        {
+          "Name": "开场关闭",
+          "Text": "【登录动画已关闭】",
+          "Command": "start_mtn Bgm_Musical:音效取消",
+          "VarFloats": [{ "Name": "var_start", "Type": 2, "Code": "assign 1" }]
+        },
+        {
+          "Name": "追踪开启",
+          "Text": "【追踪已开启】",
+          "Command": "start_mtn Bgm_Musical:音效确定;mouse_tracking enable",
+          "VarFloats": [{ "Name": "var_idle", "Type": 2, "Code": "assign 1" }]
+        },
+        {
+          "Name": "追踪关闭",
+          "Text": "【追踪已关闭】",
+          "Command": "start_mtn Bgm_Musical:音效取消;mouse_tracking disable",
+          "VarFloats": [{ "Name": "var_idle", "Type": 2, "Code": "assign 0" }]
+        }
+      ],
+      "Interactive_Head#2": [
+        {
+          "Name": "000",
+          "File": "FileReferences_Motions_Interactive_Head#2_0_File_0.json",
+          "FadeIn": 0,
+          "FadeOut": 0,
+          "Command": "eye_blink disable",
+          "PostCommand": "eye_blink enable"
+        }
+      ],
+      "Interactive_Night#2": [
+        {
+          "Name": "on",
+          "File": "FileReferences_Motions_Interactive_Night#2_0_File_0.json",
+          "Sound": "FileReferences_Motions_Interactive_Night#2_0_Sound_0.mp3",
+          "SoundChannel": 2,
+          "FadeIn": 0,
+          "FadeOut": 0,
+          "VarFloats": [
+            { "Name": "var_night", "Type": 1, "Code": "equal 0" },
+            { "Name": "var_night", "Type": 2, "Code": "assign 1" }
+          ]
+        },
+        {
+          "Name": "off",
+          "File": "FileReferences_Motions_Interactive_Night#2_1_File_0.json",
+          "Sound": "FileReferences_Motions_Interactive_Night#2_1_Sound_0.mp3",
+          "SoundChannel": 2,
+          "FadeIn": 0,
+          "FadeOut": 0,
+          "VarFloats": [
+            { "Name": "var_night", "Type": 1, "Code": "equal 1" },
+            { "Name": "var_night", "Type": 2, "Code": "assign 0" }
+          ]
+        }
+      ],
+      "Interactive_Ma_Hide": [
+        {
+          "Name": "00",
+          "Sound": "FileReferences_Motions_Interactive_Ma_Hide_0_Sound_0.mp3",
+          "SoundChannel": 2,
+          "Command": "parameters lock xw_masaike_hide 1",
+          "VarFloats": [
+            { "Name": "var_masaike", "Type": 1, "Code": "equal 0" },
+            { "Name": "var_masaike", "Type": 2, "Code": "assign 1" }
+          ]
+        },
+        {
+          "Name": "01",
+          "Sound": "FileReferences_Motions_Interactive_Ma_Hide_0_Sound_0.mp3",
+          "SoundChannel": 2,
+          "Command": "parameters lock xw_masaike_hide 2",
+          "VarFloats": [
+            { "Name": "var_masaike", "Type": 1, "Code": "equal 1" },
+            { "Name": "var_masaike", "Type": 2, "Code": "assign 2" }
+          ]
+        },
+        {
+          "Name": "02",
+          "Sound": "FileReferences_Motions_Interactive_Ma_Hide_0_Sound_0.mp3",
+          "SoundChannel": 2,
+          "Command": "parameters lock xw_masaike_hide 0",
+          "VarFloats": [
+            { "Name": "var_masaike", "Type": 1, "Code": "equal 2" },
+            { "Name": "var_masaike", "Type": 2, "Code": "assign 0" }
+          ]
+        }
+      ],
+      "Interactive_EyeZ_Hide": [
+        {
+          "Name": "on",
+          "Sound": "FileReferences_Motions_Bgm_Musical_1_Sound_0.mp3",
+          "SoundChannel": 2,
+          "Command": "parameters lock mod_night_role3 10",
+          "VarFloats": [
+            { "Name": "var_eye", "Type": 1, "Code": "equal 0" },
+            { "Name": "var_eye", "Type": 2, "Code": "assign 1" }
+          ]
+        },
+        {
+          "Name": "off",
+          "Sound": "FileReferences_Motions_Bgm_Musical_2_Sound_0.mp3",
+          "SoundChannel": 2,
+          "Command": "parameters lock mod_night_role3 0",
+          "VarFloats": [
+            { "Name": "var_eye", "Type": 1, "Code": "equal 1" },
+            { "Name": "var_eye", "Type": 2, "Code": "assign 0" }
+          ]
+        }
+      ],
+      "Interactive_Breast_Hide": [
+        {
+          "Name": "15-10",
+          "Sound": "FileReferences_Motions_Interactive_Ma_Hide_0_Sound_0.mp3",
+          "SoundChannel": 2,
+          "Command": "parameters lock xw_breast_hide 10",
+          "VarFloats": [
+            { "Name": "var_oupai", "Type": 1, "Code": "equal 0" },
+            { "Name": "var_oupai", "Type": 2, "Code": "assign 1" }
+          ]
+        },
+        {
+          "Name": "10-5",
+          "Sound": "FileReferences_Motions_Interactive_Ma_Hide_0_Sound_0.mp3",
+          "SoundChannel": 2,
+          "Command": "parameters lock xw_breast_hide 5",
+          "VarFloats": [
+            { "Name": "var_oupai", "Type": 1, "Code": "equal 1" },
+            { "Name": "var_oupai", "Type": 2, "Code": "assign 2" }
+          ]
+        },
+        {
+          "Name": "5-15",
+          "Sound": "FileReferences_Motions_Interactive_Ma_Hide_0_Sound_0.mp3",
+          "SoundChannel": 2,
+          "Command": "parameters lock xw_breast_hide 15",
+          "VarFloats": [
+            { "Name": "var_oupai", "Type": 1, "Code": "equal 2" },
+            { "Name": "var_oupai", "Type": 2, "Code": "assign 0" }
+          ]
+        }
+      ],
+      "Interactive_Breast_Boom#2": [
+        {
+          "File": "/motions/FileReferences_Motions_Interactive_Breast_Boom#2_0_File_0.json",
+          "Command": "physics disable",
+          "PostCommand": "physics enable"
+        }
+      ]
+
+      "TapTouchFace": [
+        {
+          "Name": "好感度-失望feeling1",
+          "Sound": "/sounds/FileReferences_Motions_TapTouchFace_0_Sound_0.mp3",
+          "Text": "似乎我对你的期待有些过高了。",
+          "Intimacy": { "Min": 0, "Max": 30 }
+        },
+        {
+          "Name": "好感度-陌生feeling2",
+          "Sound": "/sounds/FileReferences_Motions_TapTouchFace_1_Sound_0.mp3",
+          "Text": "古人有曰：常胜之家，难于虑敌。指挥官，即使是一直打胜仗，也不要忘了时刻反思总结。"
+        },
+        {
+          "Name": "好感度-友好feeling3",
+          "Sound": "/sounds/FileReferences_Motions_TapTouchFace_2_Sound_0.mp3",
+          "Text": "战争并非公平的棋局，倘若能趁着对方不注意，先思考•理解•下个两三手——胜利就是这么来的哦。"
+        },
+        {
+          "Name": "好感度-喜欢feeling4",
+          "Sound": "/sounds/FileReferences_Motions_TapTouchFace_3_Sound_0.mp3",
+          "Text": "光是普通地下棋，久了也不免乏味。不如来点别的规矩，让对局变得更有趣一些吧。比如说……如果你能从我手中赢下一局，我就答应你一个要求，如何？"
+        },
+        {
+          "Name": "好感度-爱意feeling5",
+          "Sound": "/sounds/FileReferences_Motions_TapTouchFace_4_Sound_0.mp3",
+          "Text": "哎呀，大意了呢，一向精于计策的我竟然会在这种地方失误……嗯，恭喜你赢了哦。那么，愿赌服输，告诉我你的要求是什么，什么都可以哦，呵呵～",
+          "Intimacy": { "Min": 99 }
+        },
+        {
+          "Name": "好感度-爱意feeling5_ex1100",
+          "Sound": "/sounds/FileReferences_Motions_TapTouchFace_5_Sound_0.mp3",
+          "Text": "今天也要来下棋么？那，这次也定个额外的规则好了。输的一方就要负责考虑，棋局结束之后的二人时光怎么度过吧。我偶尔也想偷偷懒，请允许我全力以赴哦~",
+          "Intimacy": { "Min": 99 }
+        },
+        {
+          "Name": "好感度-爱意feeling5_1",
+          "Sound": "/sounds/FileReferences_Motions_TapTouchFace_6_Sound_0.mp3",
+          "Text": "你知道这厅堂里，对我最重要的是什么吗？不是这华丽的装饰，也不是这看起来价值连城的收藏品。没错，正是你哦，指挥官。",
+          "Intimacy": { "Min": 99 }
+        },
+        {
+          "Name": "好感度-爱意feeling5_2",
+          "Text": "所以,今日有何打算呢？没有棋局，也没有博弈，只有你我二人共处的休假时间……主动权在指挥官你的手上，你不会让它白白流走的吧？",
+          "Intimacy": { "Min": 99 }
+        }
+      ],
+      "TapTouchBreast": [
+        {
+          "Name": "触摸台词touch_1",
+          "Sound": "FileReferences_Motions_TapTouchBreast_0_Sound_0.mp3",
+          "Text": "有什么事？你该不会……只是想和我闲聊吧。"
+        },
+        {
+          "Name": "触摸台词touch_1_ex1100",
+          "Sound": "FileReferences_Motions_TapTouchBreast_1_Sound_0.mp3",
+          "Text": "就算只是闲聊，只要是与你一起，这枯燥的时间便被点缀上了几分色彩。"
+        },
+        {
+          "Name": "特殊触摸touch_2",
+          "Sound": "FileReferences_Motions_TapTouchBreast_2_Sound_0.mp3",
+          "Text": "胆子挺大的嘛。",
+          "Intimacy": { "Min": 39 }
+        },
+        {
+          "Name": "特殊触摸touch_2_ex1100",
+          "Sound": "FileReferences_Motions_TapTouchBreast_3_Sound_0.mp3",
+          "Text": "看来有必要给你一点“特别关照”了呢。",
+          "Intimacy": { "Min": 39 }
+        },
+        {
+          "Name": "触摸台词touch_1_1",
+          "Sound": "FileReferences_Motions_TapTouchBreast_4_Sound_0.mp3",
+          "Text": "要试试这个电话么？拨号盘不是很好用，小心别打错了。"
+        },
+        {
+          "Name": "特殊触摸touch_2_1",
+          "Sound": "FileReferences_Motions_TapTouchBreast_5_Sound_0.mp3",
+          "Text": "看来该让你知道，谁才是这里的主人了呢。",
+          "Intimacy": { "Min": 39 }
+        },
+        {
+          "Name": "触摸台词touch_1_2",
+          "Sound": "FileReferences_Motions_TapTouchBreast_6_Sound_0.mp3",
+          "Text": "有什么事么？先说好，不是要紧事的话，休假期间不谈工作哦。"
+        },
+        {
+          "Name": "特殊触摸touch_2_2",
+          "Sound": "FileReferences_Motions_TapTouchBreast_7_Sound_0.mp3",
+          "Text": "哎呀，指挥官，定力不足呢。",
+          "Intimacy": { "Min": 39 }
+        }
+      ],
+      "TapTouchBody": [
+        {
+          "Name": "主界面main_1",
+          "Sound": "/sounds/FileReferences_Motions_TapTouchBody_0_Sound_0.mp3",
+          "Text": "你是在思考吗？还是说，只是单纯的在发呆？……表情倒是挺可爱的呢，呵呵~",
+          "Intimacy": { "Bonus": 1 }
+        },
+        {
+          "Name": "主界面main_2",
+          "Sound": "/sounds/FileReferences_Motions_TapTouchBody_1_Sound_0.mp3",
+          "Text": "我思考时的表情有些阴沉？你怎么能肯定，那不是我的“伪装”之一呢？",
+          "Intimacy": { "Bonus": 1 }
+        },
+        {
+          "Name": "主界面main_3",
+          "Sound": "/sounds/FileReferences_Motions_TapTouchBody_2_Sound_0.mp3",
+          "Text": "勉强也好，虚张声势也好，不到万不得已时，不要让别人看穿了你的底牌。",
+          "Intimacy": { "Bonus": 1 }
+        },
+        {
+          "Name": "主界面main_4_ex1100",
+          "Sound": "/sounds/FileReferences_Motions_TapTouchBody_3_Sound_0.mp3",
+          "Text": "东煌以外亦有不少下棋的能手。只可惜不同棋规则大相径庭，无法酣畅淋漓地对弈呢。"
+        },
+        {
+          "Name": "主界面main_5_ex1100",
+          "Sound": "/sounds/FileReferences_Motions_TapTouchBody_4_Sound_0.mp3",
+          "Text": "所谓奇袭，并非一定是从背后偷袭，比如说，像这样突然靠近你的脸——是不是被吓了一跳？呵呵~"
+        },
+        {
+          "Name": "主界面main_1_1",
+          "Sound": "/sounds/FileReferences_Motions_TapTouchBody_5_Sound_0.mp3",
+          "Text": "能与我对弈的对手已经有了，要是再有棋盘与棋子就再好不过了…啊，不着急，一会我再去取。"
+        },
+        {
+          "Name": "主界面main_2_1",
+          "Sound": "/sounds/FileReferences_Motions_TapTouchBody_6_Sound_0.mp3",
+          "Text": "指挥官，你喜欢哪些藏品？瓷器、玉器？还是字画？亦或是……整个屋子本身？呵呵~"
+        },
+        {
+          "Name": "主界面main_3_1",
+          "Sound": "/sounds/FileReferences_Motions_TapTouchBody_7_Sound_0.mp3",
+          "Text": "海圻的花舱，肇和的独舞……今晚的节目甚是丰盛。如果能有人陪我一同欣赏，那自然再好不过——你明白我的意思吧？"
+        },
+        {
+          "Name": "主界面main_1_2",
+          "Sound": "/sounds/FileReferences_Motions_TapTouchBody_8_Sound_0.mp3",
+          "Text": "乘兴而来，兴尽而归。平时里繁杂的事务考虑多了，这种时候就该放空思绪单纯享受~",
+          "Intimacy": { "Bonus": 1 }
+        },
+        {
+          "Name": "主界面main_2_2",
+          "Sound": "/sounds/FileReferences_Motions_TapTouchBody_9_Sound_0.mp3",
+          "Text": "海圻？兴许她此时正在某个地方和刚结识的小伙伴打水仗吧。你要去找她们么？",
+          "Intimacy": { "Bonus": 1 }
+        },
+        {
+          "Name": "主界面main_3_2",
+          "Sound": "/sounds/FileReferences_Motions_TapTouchBody_10_Sound_0.mp3",
+          "Text": "水波、艳阳、还有若隐若现的彩虹……如果海天在这里的话，大概又能听她吟诗一首了。",
+          "Intimacy": { "Bonus": 1 }
+        }
+      ],
+      "TapTouchLegs": [
+        {
+          "Name": "登陆界面extra",
+          "Sound": "FileReferences_Motions_TapTouchLegs_0_Sound_0.mp3",
+          "Text": "碧蓝航线"
+        },
+        {
+          "Name": "自我介绍profile",
+          "Sound": "FileReferences_Motions_TapTouchLegs_1_Sound_0.mp3",
+          "Text": "是东煌最早的水上飞机母舰，镇海。虽然有很多个“第一”，不过那些并非都是荣誉就是。相比起那些真正的航空母舰，我欠缺的东西还是有点多呢。"
+        },
+        {
+          "Name": "礼物喜欢present_like",
+          "Sound": "FileReferences_Motions_TapTouchLegs_2_Sound_0.mp3",
+          "Intimacy": { "Min": 99 },
+          "Enabled": false
+        },
+        {
+          "Name": "礼物讨厌present_dislike",
+          "Sound": "FileReferences_Motions_TapTouchLegs_3_Sound_0.mp3",
+          "Enabled": false
+        },
+        {
+          "Name": "获取台词get",
+          "Sound": "FileReferences_Motions_TapTouchLegs_4_Sound_0.mp3",
+          "Text": "你就是指挥官，这个港区的“头脑”吗？…呵呵，不仅能亲眼见到大名鼎鼎的指挥官，还能与其共识，实属我的荣幸。……可不要辜负了我的期待哦？"
+        },
+        {
+          "Name": "查看详情detail",
+          "Sound": "FileReferences_Motions_TapTouchLegs_5_Sound_0.mp3",
+          "Text": "若你实在是空闲……不妨来下一盘围棋？没有读秒，无关胜负，权当杀杀时间就好。"
+        },
+        {
+          "Name": "获取台词get_1",
+          "Sound": "FileReferences_Motions_TapTouchLegs_6_Sound_0.mp3",
+          "Text": "如约而至了呢，指挥官，欢迎~对这里的装潢还满意否？我们的时间很多，不妨先坐下来。喝口茶，再慢慢聊你想聊的话题吧。  "
+        },
+        {
+          "Name": "查看详情detail_1",
+          "Sound": "FileReferences_Motions_TapTouchLegs_7_Sound_0.mp3",
+          "Text": "对我的收藏感兴趣吗？呵呵，里屋还有不少，不如随我一起去欣赏一下如何？"
+        },
+        {
+          "Name": "获取台词get_2",
+          "Sound": "FileReferences_Motions_TapTouchLegs_8_Sound_0.mp3",
+          "Text": "哦？是指挥官啊，你也是来此处避暑么？真是奇妙的巧合啊，还是说…其实是你另有所图呢？呵呵呵~"
+        },
+        {
+          "Name": "查看详情detail_2",
+          "Sound": "FileReferences_Motions_TapTouchLegs_9_Sound_0.mp3",
+          "Text": "炎夏之时浸在清凉的水中，确实是至高无上的享受呢。你若是不介意打湿衣服，也可以来试试哦。"
+        }
+      ],
+      "TapTouchBattle": [
+        {
+          "Name": "旗舰开战warcry",
+          "Sound": "FileReferences_Motions_TapTouchBattle_0_Sound_0.mp3",
+          "Text": "敌人最松懈的时候，就是我们机会来临的时候——",
+          "Command": "start_mtn Mnt_Battle",
+          "Interruptable": true
+        },
+        {
+          "Name": "胜利台词mvp",
+          "Sound": "FileReferences_Motions_TapTouchBattle_1_Sound_0.mp3",
+          "Text": "敌军战意已衰。看来，它们也就这点能耐了。",
+          "Command": "start_mtn Mnt_Battle",
+          "Interruptable": true
+        },
+        {
+          "Name": "失败台词lose",
+          "Sound": "FileReferences_Motions_TapTouchBattle_2_Sound_0.mp3",
+          "Text": "棋差一着…么…多少有些不甘心啊，下次可就不会这样了呢，呵呵呵…",
+          "Command": "start_mtn Mnt_Battle",
+          "Interruptable": true
+        },
+        {
+          "Name": "技能台词skill",
+          "Sound": "FileReferences_Motions_TapTouchBattle_3_Sound_0.mp3",
+          "Text": "攻其无备，出其不意！",
+          "Command": "start_mtn Mnt_Battle",
+          "Interruptable": true
+        },
+        {
+          "Name": "血量告急hp",
+          "Sound": "FileReferences_Motions_TapTouchBattle_4_Sound_0.mp3",
+          "Text": "不入虎穴焉得虎子……",
+          "Command": "start_mtn Mnt_Battle",
+          "Interruptable": true
+        },
+        {
+          "Name": "彩蛋台词link1",
+          "Sound": "FileReferences_Motions_TapTouchBattle_5_Sound_0.mp3",
+          "Text": "（应瑞，肇和，海圻）攻其无备，出其不意！",
+          "Command": "start_mtn Mnt_Battle",
+          "Interruptable": true
+        }
+      ]
