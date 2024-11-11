@@ -22,7 +22,7 @@ ul{
 
 }
 .bg {
-  /* background-image: url(https://patchwiki.biligame.com/images/blhx/2/21/b1u6ywszm0l9kyeajwks77m6e44z7wf.png); */
+  background-image: url(https://patchwiki.biligame.com/images/blhx/2/21/b1u6ywszm0l9kyeajwks77m6e44z7wf.png);
   background-size: 100% 100%; 
   background-position: center;
   background-attachment: fixed; /* 背景图片固定 */
@@ -46,6 +46,7 @@ ul{
     margin-right: 2%;
     overflow: hidden;
     margin-bottom: 1%;
+    border-radius: 5px;
 }
 .menu li{
     width: 200px;
