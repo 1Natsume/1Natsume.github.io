@@ -93,7 +93,7 @@
     var staticParam = {
       css: [staticPath + "css/app.css"],
       js: [
-        // staticPath + "js/manifest.js",
+        staticPath + "js/433.js",
         // staticPath + "js/vendor.js",
         staticPath + "js/app.js",
       ],
