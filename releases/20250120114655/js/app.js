@@ -1167,7 +1167,7 @@ var matchUrlType = function matchUrlType(pathname) {
     var relPath = matchUrlType(pathname);
     relPath = relPath ? relPath : '/subject/category/default';
     return {
-      path: BlogContext/* default */.A.VUE_CTX + relPath
+      path: "/c" + relPath
     };
   }
 });
@@ -1177,7 +1177,7 @@ var matchUrlType = function matchUrlType(pathname) {
 
 // 路由懒加载
 var BlogPanel = function BlogPanel() {
-  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(664), __webpack_require__.e(577), __webpack_require__.e(594), __webpack_require__.e(461), __webpack_require__.e(798)]).then(__webpack_require__.bind(__webpack_require__, 7756));
+  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(664), __webpack_require__.e(577), __webpack_require__.e(594), __webpack_require__.e(461), __webpack_require__.e(761)]).then(__webpack_require__.bind(__webpack_require__, 9781));
 };
 var Admin = function Admin() {
   return __webpack_require__.e(/* import() */ 506).then(__webpack_require__.bind(__webpack_require__, 1506));
@@ -1241,10 +1241,8 @@ var routes = [{
   // 不识别的path自动匹配404
   redirect: '/'
 }];
-
-//let base = process.env.BASE_URL;
 var router = (0,vue_router/* createRouter */.aE)({
-  history: (0,vue_router/* createWebHashHistory */.Bt)(),
+  history: (0,vue_router/* createWebHistory */.LA)(),
   routes: routes
 });
 /* harmony default export */ const src_router = (router);
@@ -1281,7 +1279,7 @@ var getExtendStylePath = function getExtendStylePath(relativePath) {
 var convertSubjectUrls = function convertSubjectUrls(list) {
   list = jquery__WEBPACK_IMPORTED_MODULE_1___default()(list);
   list.each(function (i, v) {
-    v.url = (v.url || "").replace(new RegExp("https://www.cnblogs.com/.+?/"), process.env.VUE_CTX + "/subject/");
+    v.url = (v.url || "").replace(new RegExp("https://www.cnblogs.com/.+?/"), _context_BlogContext__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A.VUE_CTX + "/subject/");
   });
   return list;
 };
@@ -1882,7 +1880,7 @@ var bus = (0,mitt__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)();
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "20250120102332/js/" + chunkId + ".js";
+/******/ 			return "20250120114655/js/" + chunkId + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -1891,7 +1889,7 @@ var bus = (0,mitt__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)();
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.miniCssF = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "20250120102332/css/" + chunkId + ".css";
+/******/ 			return "20250120114655/css/" + chunkId + ".css";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -2059,7 +2057,7 @@ var bus = (0,mitt__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)();
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.miniCss = (chunkId, promises) => {
-/******/ 			var cssChunks = {"117":1,"349":1,"461":1,"577":1,"798":1};
+/******/ 			var cssChunks = {"117":1,"349":1,"461":1,"577":1,"761":1};
 /******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(() => {
