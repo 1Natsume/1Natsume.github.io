@@ -1165,9 +1165,9 @@ var matchUrlType = function matchUrlType(pathname) {
   redirect: function redirect(e) {
     var pathname = window.location.pathname;
     var relPath = matchUrlType(pathname);
-    relPath = relPath ? relPath : '/subject/category/default';
+    relPath = relPath ? relPath : "/c" + '/subject/category/default';
     return {
-      path: "/c" + relPath
+      path: "https://www.cnblogs.com/newjersey/" + relPath
     };
   }
 });
@@ -1242,7 +1242,7 @@ var routes = [{
   redirect: '/'
 }];
 var router = (0,vue_router/* createRouter */.aE)({
-  history: (0,vue_router/* createWebHistory */.LA)(),
+  history: (0,vue_router/* createWebHistory */.LA)("https://www.cnblogs.com/newjersey/"),
   routes: routes
 });
 /* harmony default export */ const src_router = (router);
@@ -1880,7 +1880,7 @@ var bus = (0,mitt__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)();
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "20250120114655/js/" + chunkId + ".js";
+/******/ 			return "js/" + chunkId + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -1889,7 +1889,7 @@ var bus = (0,mitt__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)();
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.miniCssF = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "20250120114655/css/" + chunkId + ".css";
+/******/ 			return "css/" + chunkId + ".css";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -1987,7 +1987,7 @@ var bus = (0,mitt__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)();
 /******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
 /******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
 /******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl + "../../";
+/******/ 		__webpack_require__.p = scriptUrl + "../";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/css loading */

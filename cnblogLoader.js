@@ -7,8 +7,6 @@
       var c_css = param.css;
       var c_js = param.js;
       var c_ico = param.ico;
-      var c_extCss = param.extCss;
-      var c_extJs = param.extJs;
   
       function dynamicLoadIco(url, dom) {
         var link = document.createElement('link');
@@ -69,27 +67,14 @@
           }
         })();
   
-  
-        /*加载扩展Css*/
-        while (c_extCss.length > 0) {
-          dynamicLoadCss(c_extCss.shift(), '');
-        }
-        /*加载扩展JS*/
-        (function () {
-          if (c_extJs.length > 0) {
-            dynamicLoadJs(c_extJs.shift(), '', arguments.callee);
-          }
-        })();
       });
     };
   
-    var _config = window._config || {};
+    var _config = config || {};
     var staticSrc = _config.staticSrc;
-    var staticVer = _config.staticVer;
+    //var staticVer = _config.staticVer;
     var staticIco = _config.staticIco;
-    var extCss = _config.extCss || [];
-    var extJs = _config.extJs || [];
-    var staticPath = staticSrc + staticVer + "/";
+    var staticPath = staticSrc + "/";
     var staticParam = {
       css: [staticPath + "css/app.css"],
       js: [
@@ -97,8 +82,6 @@
         // staticPath + "js/vendor.js",
         staticPath + "js/app.js",
       ],
-      extCss: extCss,
-      extJs: extJs,
       ico: staticIco,
     };
     cnblogLoader(staticParam);

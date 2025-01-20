@@ -1229,7 +1229,7 @@ const MenuItems_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(MenuItem
 // EXTERNAL MODULE: ./src/utils/BlogKit.js
 var BlogKit = __webpack_require__(2555);
 ;// ./src/assets/Natsume.png
-const Natsume_namespaceObject = __webpack_require__.p + "20250120114655/img/Natsume.c2f3cc8..png";
+const Natsume_namespaceObject = __webpack_require__.p + "img/Natsume.c2f3cc8..png";
 ;// ./node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/index.js??ruleSet[0]!./src/components/aside/PanelAside.vue?vue&type=script&lang=js
 /*面板侧边控件*/
 
