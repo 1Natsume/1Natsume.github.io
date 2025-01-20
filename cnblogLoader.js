@@ -1,9 +1,21 @@
-(function(){
-    var cnblogLoader = function(param) {
-      if (!param) {
-        console.log("缺少必要参数,param[js],param[css]");
+(function($){
+    var cnblogLoader = function(config) {
+      if (!config) {
+        console.log("缺少必要参数,staticSrc");
         return;
       }
+      var staticPath = config.staticSrc + "/";
+
+      var param = {
+        css: [staticPath + "css/app.css"],
+        js: [
+          staticPath + "js/433.js",
+          // staticPath + "js/vendor.js",
+          staticPath + "js/app.js",
+        ],
+        ico: config.staticIco,
+      };
+
       var c_css = param.css;
       var c_js = param.js;
       var c_ico = param.ico;
@@ -69,22 +81,6 @@
   
       });
     };
-  
-    var _config = config || {};
-    var staticSrc = _config.staticSrc;
-    //var staticVer = _config.staticVer;
-    var staticIco = _config.staticIco;
-    var staticPath = staticSrc + "/";
-    var staticParam = {
-      css: [staticPath + "css/app.css"],
-      js: [
-        staticPath + "js/433.js",
-        // staticPath + "js/vendor.js",
-        staticPath + "js/app.js",
-      ],
-      ico: staticIco,
-    };
-    cnblogLoader(staticParam);
-  })();
-  
+    $.cnblogLoader = cnblogLoader
+  })($);
   
