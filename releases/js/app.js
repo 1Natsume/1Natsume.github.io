@@ -1165,9 +1165,9 @@ var matchUrlType = function matchUrlType(pathname) {
   redirect: function redirect(e) {
     var pathname = window.location.pathname;
     var relPath = matchUrlType(pathname);
-    relPath = relPath ? relPath : "/c" + '/subject/category/default';
+    relPath = relPath ? relPath : '/subject/category/default';
     return {
-      path: "https://www.cnblogs.com/newjersey/" + relPath
+      path: "/c" + relPath
     };
   }
 });
@@ -1242,7 +1242,7 @@ var routes = [{
   redirect: '/'
 }];
 var router = (0,vue_router/* createRouter */.aE)({
-  history: (0,vue_router/* createWebHistory */.LA)("https://www.cnblogs.com/newjersey/"),
+  history: (0,vue_router/* createWebHistory */.LA)(({"NODE_ENV":"production","VUE_CTX":"/c"}).BASE_URL),
   routes: routes
 });
 /* harmony default export */ const src_router = (router);
