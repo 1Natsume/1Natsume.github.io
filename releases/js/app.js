@@ -72,8 +72,7 @@ var BlogContext = {
     title: "后台",
     url: '/admin',
     icon: "fc-lol-goutou fc-icon-40"
-  }],
-  VUE_CTX: '/c'
+  }]
   // setBlogAccAndId: (acc, id) => {
   //   blogAcc: acc;
   //   blogId: id;
@@ -1177,22 +1176,22 @@ var matchUrlType = function matchUrlType(pathname) {
 
 // 路由懒加载
 var BlogPanel = function BlogPanel() {
-  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(664), __webpack_require__.e(577), __webpack_require__.e(594), __webpack_require__.e(461), __webpack_require__.e(761)]).then(__webpack_require__.bind(__webpack_require__, 9781));
+  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(522), __webpack_require__.e(461), __webpack_require__.e(623)]).then(__webpack_require__.bind(__webpack_require__, 1540));
 };
 var Admin = function Admin() {
   return __webpack_require__.e(/* import() */ 506).then(__webpack_require__.bind(__webpack_require__, 1506));
 };
 var CategoryBody = function CategoryBody() {
-  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(664), __webpack_require__.e(594)]).then(__webpack_require__.bind(__webpack_require__, 3594));
+  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(594)]).then(__webpack_require__.bind(__webpack_require__, 3594));
 };
 var ArticleBody = function ArticleBody() {
-  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(664), __webpack_require__.e(577), __webpack_require__.e(349), __webpack_require__.e(117)]).then(__webpack_require__.bind(__webpack_require__, 3498));
+  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(522), __webpack_require__.e(655)]).then(__webpack_require__.bind(__webpack_require__, 1925));
 };
 var SubjectBody = function SubjectBody() {
-  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(664), __webpack_require__.e(577), __webpack_require__.e(594), __webpack_require__.e(461)]).then(__webpack_require__.bind(__webpack_require__, 7461));
+  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(522), __webpack_require__.e(461), __webpack_require__.e(556)]).then(__webpack_require__.bind(__webpack_require__, 7461));
 };
 var BlogAuthorBody = function BlogAuthorBody() {
-  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(664), __webpack_require__.e(349), __webpack_require__.e(708)]).then(__webpack_require__.bind(__webpack_require__, 8708));
+  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(708)]).then(__webpack_require__.bind(__webpack_require__, 8708));
 };
 var routes = [{
   path: '/',
@@ -2057,7 +2056,7 @@ var bus = (0,mitt__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)();
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.miniCss = (chunkId, promises) => {
-/******/ 			var cssChunks = {"117":1,"349":1,"461":1,"577":1,"761":1};
+/******/ 			var cssChunks = {"556":1,"623":1,"655":1,"708":1};
 /******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(() => {
@@ -2096,7 +2095,7 @@ var bus = (0,mitt__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)();
 /******/ 					if(installedChunkData) {
 /******/ 						promises.push(installedChunkData[2]);
 /******/ 					} else {
-/******/ 						if(true) { // all chunks have JS
+/******/ 						if(556 != chunkId) {
 /******/ 							// setup Promise in chunk cache
 /******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
 /******/ 							promises.push(installedChunkData[2] = promise);
@@ -2121,7 +2120,7 @@ var bus = (0,mitt__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)();
 /******/ 								}
 /******/ 							};
 /******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
-/******/ 						}
+/******/ 						} else installedChunks[chunkId] = 0;
 /******/ 					}
 /******/ 				}
 /******/ 		};
