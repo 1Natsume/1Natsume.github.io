@@ -46,15 +46,10 @@ var BlogContext = {
   //aboutmeHtml: `<img src:'${extendStylePath}/img/ing/aboutme.jpg'/>`,
   avatarSign: "",
   ingTitle: "你的一字一句犹如刀疤划心上，我的一举一动随你改变多荒唐。",
+  //{name: '', url: ''}格式
   blogFriendList: [],
-  //{name: '', url: ''}格式
   blogUsedLinks: [],
-  //{name: '', url: ''}格式
   musicIds: ["7282638202"],
-  qq: "592571519",
-  email: "592571519@qq.com",
-  github: "cjunn",
-  defHeadImg: "https://img2.baidu.com/it/u:1129333932,2974296147&fm:253&fmt:auto&app:138&f:JPEG?w:500&h:500",
   feelingBlogId: 13393903,
   menu: [{
     title: "首页",
@@ -65,28 +60,19 @@ var BlogContext = {
     url: '/c/subject/p/12494785',
     icon: "fc-lol-naima fc-icon-40"
   }, {
-    title: "赞赏",
-    url: '/c/subject/p/12495086',
+    title: "关注",
+    url: 'me',
     icon: "fc-lol-ruiwen fc-icon-40"
   }, {
     title: "后台",
     url: '/admin',
     icon: "fc-lol-goutou fc-icon-40"
+  }],
+  contact: [{
+    title: "",
+    dec: "",
+    icon: ""
   }]
-  // setBlogAccAndId: (acc, id) => {
-  //   blogAcc: acc;
-  //   blogId: id;
-  //   sendPage: sendPage.replace(`${blogAcc}`, acc);
-  //   subPage: subPage.replace(`${blogAcc}`, acc);
-  //   indexPage: indexPage.replace(`${blogAcc}`, acc);
-  // },
-  // setGidAndName:(gid, name)=> {
-  //   blogUserGuid: gid;
-  //   blogName: name;
-  // },
-  // setPid: (pId)=> {
-  //   blogPostId: pId;
-  // }
 };
 /* harmony default export */ const BlogEnv = (BlogContext);
 ;// ./src/context/BlogApi.js
@@ -920,17 +906,120 @@ BlogContext_BlogContext = Object.assign(BlogContext_BlogContext, window._config)
 
 /***/ }),
 
-/***/ 9919:
+/***/ 3563:
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 
 // EXTERNAL MODULE: ./node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js
 var runtime_dom_esm_bundler = __webpack_require__(3751);
-// EXTERNAL MODULE: ./src/router/index.js + 1 modules
-var router = __webpack_require__(9624);
+// EXTERNAL MODULE: ./node_modules/vue-router/dist/vue-router.mjs
+var vue_router = __webpack_require__(5220);
+// EXTERNAL MODULE: ./src/context/BlogContext.js + 5 modules
+var BlogContext = __webpack_require__(7118);
+;// ./src/utils/BlogRedirect.js
+
+var matchUrlType = function matchUrlType(pathname) {
+  var regexps = [/*请求打开文章*/
+  new RegExp("^/" + BlogContext/* default */.A.blogAcc + "/p/(.+)?"),
+  // eslint-disable-line
+  /*请求打开类别*/
+  new RegExp("^/" + BlogContext/* default */.A.blogAcc + "/category/(.+)?") // eslint-disable-line
+  ];
+  for (var i in regexps) {
+    if (regexps[i].test(pathname)) {
+      return '/subject' + pathname.replace("/" + BlogContext/* default */.A.blogAcc, "");
+    }
+  }
+};
+/* harmony default export */ const BlogRedirect = ({
+  redirect: function redirect(e) {
+    var pathname = window.location.pathname;
+    var relPath = matchUrlType(pathname);
+    relPath = relPath ? relPath : '/subject/category/default';
+    return {
+      path: "/c" + relPath
+    };
+  }
+});
+;// ./src/router/index.js
+
+
+
+// 路由懒加载
+var BlogPanel = function BlogPanel() {
+  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(522), __webpack_require__.e(461), __webpack_require__.e(541)]).then(__webpack_require__.bind(__webpack_require__, 2850));
+};
+var Admin = function Admin() {
+  return __webpack_require__.e(/* import() */ 506).then(__webpack_require__.bind(__webpack_require__, 1506));
+};
+var CategoryBody = function CategoryBody() {
+  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(857)]).then(__webpack_require__.bind(__webpack_require__, 4857));
+};
+var ArticleBody = function ArticleBody() {
+  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(522), __webpack_require__.e(275)]).then(__webpack_require__.bind(__webpack_require__, 425));
+};
+var SubjectBody = function SubjectBody() {
+  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(522), __webpack_require__.e(461), __webpack_require__.e(556)]).then(__webpack_require__.bind(__webpack_require__, 7461));
+};
+var BlogAuthorBody = function BlogAuthorBody() {
+  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(147)]).then(__webpack_require__.bind(__webpack_require__, 147));
+};
+var routes = [{
+  path: '/',
+  redirect: function redirect(e) {
+    return BlogRedirect.redirect(e);
+  }
+}, {
+  path: '/c',
+  name: 'BlogPanel',
+  component: BlogPanel,
+  children: [{
+    path: 'subject/',
+    name: "SubjectBody",
+    component: SubjectBody,
+    redirect: "/",
+    children: [{
+      path: 'category/:categoryId',
+      component: CategoryBody
+    }, {
+      path: 'archive/:archiveYear/:archiveMonth',
+      component: CategoryBody
+    }, {
+      path: 'tag/:tagId/',
+      component: CategoryBody
+    }, {
+      path: 'p/:articleId',
+      component: ArticleBody
+    }, {
+      path: '/admin',
+      name: 'Admin',
+      component: Admin
+    }]
+  }, {
+    path: 'author/',
+    name: "AuthorBody",
+    component: BlogAuthorBody
+  }]
+},
+// {
+//     path: '/admin',
+//     name: 'Admin',
+//     component: Admin,
+// },
+{
+  path: "/:catchAll(.*)",
+  // 不识别的path自动匹配404
+  redirect: '/'
+}];
+var router = (0,vue_router/* createRouter */.aE)({
+  history: (0,vue_router/* createWebHashHistory */.Bt)(),
+  routes: routes
+});
+/* harmony default export */ const src_router = (router);
 // EXTERNAL MODULE: ./node_modules/vuex/dist/vuex.esm-bundler.js
 var vuex_esm_bundler = __webpack_require__(834);
 ;// ./src/store/index.js
+
 
 function loadStateConfig() {
   try {
@@ -940,7 +1029,7 @@ function loadStateConfig() {
       return JSON.parse(serializedState);
     } else {
       var _config = {
-        theme: "style0",
+        theme: "handsome",
         bg: ["https://cdn.54yt.net/usr/uploads/61568506_p0.webp"],
         headcolor: "#7266ba",
         asidecolor: ""
@@ -967,7 +1056,7 @@ function loadStateThemes() {
         dec: ""
       }, {
         id: 2,
-        theme: "style0",
+        theme: "handsome",
         icon: "icon iconfont link",
         dec: ""
       }, {
@@ -989,17 +1078,26 @@ var themes = loadStateThemes();
 /* harmony default export */ const store = (new vuex_esm_bundler/* default.Store */.Ay.Store({
   state: {
     config: config,
-    themes: themes
+    themes: themes,
+    recruitScrollY: 0
   },
-  getters: {},
-  mutations: {},
+  getters: {
+    recruitScrollY: function recruitScrollY(state) {
+      return state.recruitScrollY;
+    }
+  },
+  mutations: {
+    changeRecruitScrollY: function changeRecruitScrollY(state, recruitScrollY) {
+      state.recruitScrollY = recruitScrollY;
+    }
+  },
   actions: {}
 }));
 // EXTERNAL MODULE: ./node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js
 var runtime_core_esm_bundler = __webpack_require__(641);
 // EXTERNAL MODULE: ./node_modules/@vue/shared/dist/shared.esm-bundler.js
 var shared_esm_bundler = __webpack_require__(33);
-;// ./node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0]!./src/App.vue?vue&type=template&id=bcd06080
+;// ./node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0]!./src/App.vue?vue&type=template&id=49235e96
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_view = (0,runtime_core_esm_bundler/* resolveComponent */.g2)("router-view");
@@ -1011,8 +1109,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     style: (0,shared_esm_bundler/* normalizeStyle */.Tr)($options.bg(_ctx.config.bg))
   }, null, 4), (0,runtime_core_esm_bundler/* createVNode */.bF)(_component_router_view)], 2);
 }
-// EXTERNAL MODULE: ./src/context/BlogContext.js + 5 modules
-var BlogContext = __webpack_require__(7118);
 ;// ./node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/index.js??ruleSet[0]!./src/App.vue?vue&type=script&lang=js
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
@@ -1086,8 +1182,6 @@ var mitt = __webpack_require__(8105);
 var stackoverflow_light = __webpack_require__(3709);
 // EXTERNAL MODULE: ./node_modules/highlight.js/es/common.js
 var common = __webpack_require__(1545);
-// EXTERNAL MODULE: ./node_modules/highlight.js/es/index.js
-var es = __webpack_require__(9878);
 ;// ./src/main.js
 
 
@@ -1110,7 +1204,7 @@ var app = (0,runtime_dom_esm_bundler/* createApp */.Ef)(App);
 // 创建axios实例并配置
 //app.config.globalProperties.$axios = axios
 app.config.globalProperties.$bus = mitt/* default */.A;
-app.use(router/* default */.A).use(store);
+app.use(src_router).use(store);
 app.directive('highlight', function (el) {
   var pres = el.querySelectorAll('pre');
   pres.forEach(function (pre) {
@@ -1118,133 +1212,19 @@ app.directive('highlight', function (el) {
   });
   var blocks = el.querySelectorAll('pre code');
   blocks.forEach(function (block, index) {
-    setTimeout(function () {
-      if (!block.highInit) {
-        block.highInit = true;
-        es/* default */.A.initHighlighting();
-        block.setAttribute('style', 'margin-top: 8px;');
-        es/* default */.A.highlightBlock(block);
-      }
-    }, index * 250);
+    // setTimeout(() => {
+    //   if (!block.highInit) {
+
+    //     block.highInit = true;
+    //     hljs.initHighlighting();
+
+    //     block.setAttribute('style', 'margin-top: 8px;');
+    //     hljs.highlightBlock(block)
+    //   }
+    // }, index * 250);
   });
 });
 app.mount('#app');
-
-/***/ }),
-
-/***/ 9624:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ src_router)
-});
-
-// EXTERNAL MODULE: ./node_modules/vue-router/dist/vue-router.mjs
-var vue_router = __webpack_require__(5220);
-// EXTERNAL MODULE: ./src/context/BlogContext.js + 5 modules
-var BlogContext = __webpack_require__(7118);
-;// ./src/utils/BlogRedirect.js
-
-var matchUrlType = function matchUrlType(pathname) {
-  var regexps = [/*请求打开文章*/
-  new RegExp("^/" + BlogContext/* default */.A.blogAcc + "/p/(.+)?"),
-  // eslint-disable-line
-  /*请求打开类别*/
-  new RegExp("^/" + BlogContext/* default */.A.blogAcc + "/category/(.+)?") // eslint-disable-line
-  ];
-  for (var i in regexps) {
-    if (regexps[i].test(pathname)) {
-      return '/subject' + pathname.replace("/" + BlogContext/* default */.A.blogAcc, "");
-    }
-  }
-};
-/* harmony default export */ const BlogRedirect = ({
-  redirect: function redirect(e) {
-    var pathname = window.location.pathname;
-    var relPath = matchUrlType(pathname);
-    relPath = relPath ? relPath : '/subject/category/default';
-    return {
-      path: "/c" + relPath
-    };
-  }
-});
-;// ./src/router/index.js
-
-
-
-// 路由懒加载
-var BlogPanel = function BlogPanel() {
-  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(522), __webpack_require__.e(461), __webpack_require__.e(623)]).then(__webpack_require__.bind(__webpack_require__, 1540));
-};
-var Admin = function Admin() {
-  return __webpack_require__.e(/* import() */ 506).then(__webpack_require__.bind(__webpack_require__, 1506));
-};
-var CategoryBody = function CategoryBody() {
-  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(594)]).then(__webpack_require__.bind(__webpack_require__, 3594));
-};
-var ArticleBody = function ArticleBody() {
-  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(522), __webpack_require__.e(655)]).then(__webpack_require__.bind(__webpack_require__, 1925));
-};
-var SubjectBody = function SubjectBody() {
-  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(522), __webpack_require__.e(461), __webpack_require__.e(556)]).then(__webpack_require__.bind(__webpack_require__, 7461));
-};
-var BlogAuthorBody = function BlogAuthorBody() {
-  return Promise.all(/* import() */[__webpack_require__.e(83), __webpack_require__.e(708)]).then(__webpack_require__.bind(__webpack_require__, 8708));
-};
-var routes = [{
-  path: '/',
-  redirect: function redirect(e) {
-    return BlogRedirect.redirect(e);
-  }
-}, {
-  path: '/c',
-  name: 'BlogPanel',
-  component: BlogPanel,
-  children: [{
-    path: 'subject/',
-    name: "SubjectBody",
-    component: SubjectBody,
-    redirect: "/",
-    children: [{
-      path: 'category/:categoryId',
-      component: CategoryBody
-    }, {
-      path: 'archive/:archiveYear/:archiveMonth',
-      component: CategoryBody
-    }, {
-      path: 'tag/:tagId/',
-      component: CategoryBody
-    }, {
-      path: 'p/:articleId',
-      component: ArticleBody
-    }, {
-      path: '/admin',
-      name: 'Admin',
-      component: Admin
-    }]
-  }, {
-    path: 'author/',
-    name: "AuthorBody",
-    component: BlogAuthorBody
-  }]
-},
-// {
-//     path: '/admin',
-//     name: 'Admin',
-//     component: Admin,
-// },
-{
-  path: "/:catchAll(.*)",
-  // 不识别的path自动匹配404
-  redirect: '/'
-}];
-var router = (0,vue_router/* createRouter */.aE)({
-  history: (0,vue_router/* createWebHistory */.LA)(({"NODE_ENV":"production","VUE_CTX":"/c"}).BASE_URL),
-  routes: routes
-});
-/* harmony default export */ const src_router = (router);
 
 /***/ }),
 
@@ -1278,7 +1258,7 @@ var getExtendStylePath = function getExtendStylePath(relativePath) {
 var convertSubjectUrls = function convertSubjectUrls(list) {
   list = jquery__WEBPACK_IMPORTED_MODULE_1___default()(list);
   list.each(function (i, v) {
-    v.url = (v.url || "").replace(new RegExp("https://www.cnblogs.com/.+?/"), _context_BlogContext__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A.VUE_CTX + "/subject/");
+    v.url = (v.url || "").replace(new RegExp("https://www.cnblogs.com/.+?/"), "/c" + "/subject/");
   });
   return list;
 };
@@ -2056,7 +2036,7 @@ var bus = (0,mitt__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)();
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.miniCss = (chunkId, promises) => {
-/******/ 			var cssChunks = {"556":1,"623":1,"655":1,"708":1};
+/******/ 			var cssChunks = {"275":1,"541":1,"556":1};
 /******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(() => {
@@ -2170,7 +2150,7 @@ var bus = (0,mitt__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)();
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [433], () => (__webpack_require__(9919)))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [856], () => (__webpack_require__(3563)))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

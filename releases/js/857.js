@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkblog"] = self["webpackChunkblog"] || []).push([[594],{
+(self["webpackChunkblog"] = self["webpackChunkblog"] || []).push([[857],{
 
 /***/ 664:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -490,7 +490,7 @@ var blogApi = {
 
 /***/ }),
 
-/***/ 3594:
+/***/ 4857:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -505,7 +505,7 @@ __webpack_require__.d(__webpack_exports__, {
 var runtime_core_esm_bundler = __webpack_require__(641);
 // EXTERNAL MODULE: ./node_modules/@vue/shared/dist/shared.esm-bundler.js
 var shared_esm_bundler = __webpack_require__(33);
-;// ./node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0]!./src/components/body/CategoryBody.vue?vue&type=template&id=67eb2eee
+;// ./node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0]!./src/components/body/CategoryBody.vue?vue&type=template&id=839e9a34
 
 var _hoisted_1 = {
   id: "category_body"
@@ -537,15 +537,19 @@ var _hoisted_8 = {
 };
 var _hoisted_9 = {
   key: 0,
-  "class": "complex-item post-meta wrapper-lg p-b-none"
+  "class": "sticky"
 };
 var _hoisted_10 = {
-  "class": "m-t-none index-post-title"
+  key: 1,
+  "class": "post-meta wrapper-lg p-b-none"
 };
 var _hoisted_11 = {
-  "class": "summary l-h-2x text-muted"
+  "class": "m-t-none index-post-title"
 };
 var _hoisted_12 = {
+  "class": "summary l-h-2x text-muted"
+};
+var _hoisted_13 = {
   "class": "text-muted post-item-foot-icon"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -554,8 +558,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,runtime_core_esm_bundler/* openBlock */.uX)(), (0,runtime_core_esm_bundler/* createElementBlock */.CE)("div", _hoisted_1, [(0,runtime_core_esm_bundler/* createElementVNode */.Lk)("div", _hoisted_2, [(0,runtime_core_esm_bundler/* createElementVNode */.Lk)("div", _hoisted_3, [_ctx.title ? ((0,runtime_core_esm_bundler/* openBlock */.uX)(), (0,runtime_core_esm_bundler/* createElementBlock */.CE)("div", _hoisted_4, (0,shared_esm_bundler/* toDisplayString */.v_)(_ctx.title), 1)) : (0,runtime_core_esm_bundler/* createCommentVNode */.Q3)("", true), !_ctx.title ? ((0,runtime_core_esm_bundler/* openBlock */.uX)(), (0,runtime_core_esm_bundler/* createElementBlock */.CE)("div", _hoisted_5, (0,shared_esm_bundler/* toDisplayString */.v_)(_ctx.categoryTitle), 1)) : (0,runtime_core_esm_bundler/* createCommentVNode */.Q3)("", true), !_ctx.title ? ((0,runtime_core_esm_bundler/* openBlock */.uX)(), (0,runtime_core_esm_bundler/* createElementBlock */.CE)("div", _hoisted_6, (0,shared_esm_bundler/* toDisplayString */.v_)(_ctx.categorySign), 1)) : (0,runtime_core_esm_bundler/* createCommentVNode */.Q3)("", true)]), (0,runtime_core_esm_bundler/* createElementVNode */.Lk)("div", _hoisted_7, [(0,runtime_core_esm_bundler/* createElementVNode */.Lk)("div", _hoisted_8, [((0,runtime_core_esm_bundler/* openBlock */.uX)(true), (0,runtime_core_esm_bundler/* createElementBlock */.CE)(runtime_core_esm_bundler/* Fragment */.FK, null, (0,runtime_core_esm_bundler/* renderList */.pI)(_ctx.arrList, function (item, key) {
     return (0,runtime_core_esm_bundler/* openBlock */.uX)(), (0,runtime_core_esm_bundler/* createElementBlock */.CE)("div", {
       key: key,
-      "class": (0,shared_esm_bundler/* normalizeClass */.C4)(item.isTop == true ? 'panel-small item-wrap' : 'panel item-wrap')
-    }, [(0,runtime_core_esm_bundler/* createElementVNode */.Lk)("div", {
+      "class": (0,shared_esm_bundler/* normalizeClass */.C4)(item.isTop == true ? 'panel-small' : 'panel')
+    }, [item.isTop ? ((0,runtime_core_esm_bundler/* openBlock */.uX)(), (0,runtime_core_esm_bundler/* createElementBlock */.CE)("div", _hoisted_9, "置顶")) : (0,runtime_core_esm_bundler/* createCommentVNode */.Q3)("", true), (0,runtime_core_esm_bundler/* createElementVNode */.Lk)("div", {
       "class": (0,shared_esm_bundler/* normalizeClass */.C4)(item.isTop == true ? 'index-img-small' : 'index-post-img')
     }, [(0,runtime_core_esm_bundler/* createVNode */.bF)(_component_router_link, {
       to: item.url
@@ -567,16 +571,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         }, null, 6)];
       }),
       _: 2
-    }, 1032, ["to"])], 2), item.desc ? ((0,runtime_core_esm_bundler/* openBlock */.uX)(), (0,runtime_core_esm_bundler/* createElementBlock */.CE)("div", _hoisted_9, [(0,runtime_core_esm_bundler/* createElementVNode */.Lk)("h2", _hoisted_10, [(0,runtime_core_esm_bundler/* createVNode */.bF)(_component_router_link, {
+    }, 1032, ["to"])], 2), item.desc ? ((0,runtime_core_esm_bundler/* openBlock */.uX)(), (0,runtime_core_esm_bundler/* createElementBlock */.CE)("div", _hoisted_10, [(0,runtime_core_esm_bundler/* createElementVNode */.Lk)("h2", _hoisted_11, [(0,runtime_core_esm_bundler/* createVNode */.bF)(_component_router_link, {
       to: item.url
     }, {
       "default": (0,runtime_core_esm_bundler/* withCtx */.k6)(function () {
         return [(0,runtime_core_esm_bundler/* createTextVNode */.eW)((0,shared_esm_bundler/* toDisplayString */.v_)(item.title), 1)];
       }),
       _: 2
-    }, 1032, ["to"])]), (0,runtime_core_esm_bundler/* createElementVNode */.Lk)("p", _hoisted_11, (0,shared_esm_bundler/* toDisplayString */.v_)(item.desc), 1), _cache[4] || (_cache[4] = (0,runtime_core_esm_bundler/* createElementVNode */.Lk)("div", {
+    }, 1032, ["to"])]), (0,runtime_core_esm_bundler/* createElementVNode */.Lk)("p", _hoisted_12, (0,shared_esm_bundler/* toDisplayString */.v_)(item.desc), 1), _cache[4] || (_cache[4] = (0,runtime_core_esm_bundler/* createElementVNode */.Lk)("div", {
       "class": "line line-lg b-b b-light"
-    }, null, -1)), (0,runtime_core_esm_bundler/* createElementVNode */.Lk)("div", _hoisted_12, [_cache[0] || (_cache[0] = (0,runtime_core_esm_bundler/* createElementVNode */.Lk)("i", {
+    }, null, -1)), (0,runtime_core_esm_bundler/* createElementVNode */.Lk)("div", _hoisted_13, [_cache[0] || (_cache[0] = (0,runtime_core_esm_bundler/* createElementVNode */.Lk)("i", {
       "class": "icon iconfont ios-shijian text-muted"
     }, null, -1)), (0,runtime_core_esm_bundler/* createElementVNode */.Lk)("span", null, " " + (0,shared_esm_bundler/* toDisplayString */.v_)(item.time), 1), _cache[1] || (_cache[1] = (0,runtime_core_esm_bundler/* createElementVNode */.Lk)("i", {
       "class": "icon iconfont talk text-muted"
@@ -590,7 +594,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClickItem: $options.clickItem
   }, null, 8, ["page-lines", "onClickItem"])])])]);
 }
-;// ./src/components/body/CategoryBody.vue?vue&type=template&id=67eb2eee
+;// ./src/components/body/CategoryBody.vue?vue&type=template&id=839e9a34
 
 // EXTERNAL MODULE: ./src/utils/BlogKit.js
 var BlogKit = __webpack_require__(2555);
@@ -598,30 +602,30 @@ var BlogKit = __webpack_require__(2555);
 var BlogApi = __webpack_require__(664);
 // EXTERNAL MODULE: ./src/context/BlogContext.js + 5 modules
 var BlogContext = __webpack_require__(7118);
-;// ./node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0]!./src/components/common/PageLine.vue?vue&type=template&id=237418cc
+;// ./node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0]!./src/components/common/PageLine.vue?vue&type=template&id=6034654a
 
-var PageLinevue_type_template_id_237418cc_hoisted_1 = {
+var PageLinevue_type_template_id_6034654a_hoisted_1 = {
   id: "page_line"
 };
-var PageLinevue_type_template_id_237418cc_hoisted_2 = {
+var PageLinevue_type_template_id_6034654a_hoisted_2 = {
   "class": "post-comment-num"
 };
-var PageLinevue_type_template_id_237418cc_hoisted_3 = {
+var PageLinevue_type_template_id_6034654a_hoisted_3 = {
   "class": "pagination"
 };
-var PageLinevue_type_template_id_237418cc_hoisted_4 = ["onClick"];
-function PageLinevue_type_template_id_237418cc_render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,runtime_core_esm_bundler/* openBlock */.uX)(), (0,runtime_core_esm_bundler/* createElementBlock */.CE)("div", PageLinevue_type_template_id_237418cc_hoisted_1, [(0,runtime_core_esm_bundler/* createElementVNode */.Lk)("div", PageLinevue_type_template_id_237418cc_hoisted_2, [(0,runtime_core_esm_bundler/* createElementVNode */.Lk)("ul", PageLinevue_type_template_id_237418cc_hoisted_3, [((0,runtime_core_esm_bundler/* openBlock */.uX)(true), (0,runtime_core_esm_bundler/* createElementBlock */.CE)(runtime_core_esm_bundler/* Fragment */.FK, null, (0,runtime_core_esm_bundler/* renderList */.pI)($props.pageLines, function (item) {
+var PageLinevue_type_template_id_6034654a_hoisted_4 = ["onClick"];
+function PageLinevue_type_template_id_6034654a_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,runtime_core_esm_bundler/* openBlock */.uX)(), (0,runtime_core_esm_bundler/* createElementBlock */.CE)("div", PageLinevue_type_template_id_6034654a_hoisted_1, [(0,runtime_core_esm_bundler/* createElementVNode */.Lk)("div", PageLinevue_type_template_id_6034654a_hoisted_2, [(0,runtime_core_esm_bundler/* createElementVNode */.Lk)("ul", PageLinevue_type_template_id_6034654a_hoisted_3, [((0,runtime_core_esm_bundler/* openBlock */.uX)(true), (0,runtime_core_esm_bundler/* createElementBlock */.CE)(runtime_core_esm_bundler/* Fragment */.FK, null, (0,runtime_core_esm_bundler/* renderList */.pI)($props.pageLines, function (item) {
     return (0,runtime_core_esm_bundler/* openBlock */.uX)(), (0,runtime_core_esm_bundler/* createElementBlock */.CE)("li", {
       onClick: function onClick($event) {
         return _ctx.$emit('clickItem', item.num);
       }
     }, [(0,runtime_core_esm_bundler/* createElementVNode */.Lk)("a", {
       "class": (0,shared_esm_bundler/* normalizeClass */.C4)(item.focus ? 'active' : '')
-    }, (0,shared_esm_bundler/* toDisplayString */.v_)(item.text), 3)], 8, PageLinevue_type_template_id_237418cc_hoisted_4);
+    }, (0,shared_esm_bundler/* toDisplayString */.v_)(item.text), 3)], 8, PageLinevue_type_template_id_6034654a_hoisted_4);
   }), 256))])])]);
 }
-;// ./src/components/common/PageLine.vue?vue&type=template&id=237418cc
+;// ./src/components/common/PageLine.vue?vue&type=template&id=6034654a
 
 ;// ./node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/index.js??ruleSet[0]!./src/components/common/PageLine.vue?vue&type=script&lang=js
 /* harmony default export */ const PageLinevue_type_script_lang_js = ({
@@ -644,11 +648,9 @@ var exportHelper = __webpack_require__(6262);
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(PageLinevue_type_script_lang_js, [['render',PageLinevue_type_template_id_237418cc_render]])
+const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(PageLinevue_type_script_lang_js, [['render',PageLinevue_type_template_id_6034654a_render]])
 
 /* harmony default export */ const PageLine = (__exports__);
-// EXTERNAL MODULE: ./src/router/index.js + 1 modules
-var router = __webpack_require__(9624);
 ;// ./node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/index.js??ruleSet[0]!./src/components/body/CategoryBody.vue?vue&type=script&lang=js
 
 
@@ -720,13 +722,27 @@ var imgList = Array.from(Array(BlogContext/* default */.A.panelItemPic.length - 
       } else {
         BlogApi/* default */.A.loadDefaultCategoryList(this.pageNum).then(setDataFunc);
       }
+    },
+    isTabRoute: function isTabRoute() {
+      // if(this.$route.path =='/c/subject/category'){
+      //   let recruitScrollY = this.$store.state.recruitScrollY
+      //   document.documentElement.scrollTop = recruitScrollY;
+      // }
     }
   },
   name: "ArticlesBody",
   watch: {
     $route: function $route() {
       this.initCategoryBody();
+      this.isTabRoute();
     }
+  },
+  beforeRouteLeave: function beforeRouteLeave(to, from, next) {
+    var position = document.documentElement && document.documentElement.scrollTop; //记录离开页面时的位置
+
+    if (position == null) position = 0;
+    this.$store.commit('changeRecruitScrollY', position); //离开路由时把位置存起来
+    next();
   }
 });
 ;// ./src/components/body/CategoryBody.vue?vue&type=script&lang=js
@@ -744,4 +760,4 @@ const CategoryBody_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(Categ
 /***/ })
 
 }]);
-//# sourceMappingURL=594.js.map
+//# sourceMappingURL=857.js.map
