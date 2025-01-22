@@ -9,7 +9,7 @@
       var param = {
         css: [staticPath + "css/app.css"],
         js: [
-          staticPath + "js/433.js",
+          staticPath + "js/856.js",
           // staticPath + "js/vendor.js",
           staticPath + "js/app.js",
         ],
