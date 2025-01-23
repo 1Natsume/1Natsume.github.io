@@ -7,10 +7,13 @@
       var staticPath = config.staticSrc + "/";
 
       var param = {
-        css: [staticPath + "css/app.css"],
+        css: [
+          staticPath + "css/app.css",
+          staticPath + "css/vendor.css"
+        ],
         js: [
           //staticPath + "js/856.js",
-          // staticPath + "js/vendor.js",
+          staticPath + "js/vendor.js",
           staticPath + "js/app.js",
         ],
         ico: config.staticIco,
