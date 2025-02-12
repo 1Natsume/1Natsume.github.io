@@ -66,7 +66,6 @@
         var app = $("<div id=app></div>");
         $("link").remove();
         /*删除所有除头页的消息*/
-        $("body").css("overflow", "hidden");
         $("#home").css("display", "none");
         $("body").append(app);
         /*加载图标*/
