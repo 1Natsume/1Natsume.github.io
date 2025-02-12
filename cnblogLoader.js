@@ -12,7 +12,7 @@
           staticPath + "css/vendor.css"
         ],
         js: [
-          //staticPath + "js/856.js",
+          staticPath + "js/vue.js",
           staticPath + "js/vendor.js",
           staticPath + "js/app.js",
         ],
