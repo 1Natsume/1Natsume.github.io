@@ -4,6 +4,7 @@
         console.log("缺少必要参数,staticSrc");
         return;
       }
+      window._config = config;
       var staticPath = config.staticSrc + "/";
 
       var param = {
@@ -60,6 +61,7 @@
         script.src = url;
         var head = dom || document.getElementsByTagName('head')[0];
         head.appendChild(script);
+        document.body.removeAttribute
       }
   
       $(function() {
