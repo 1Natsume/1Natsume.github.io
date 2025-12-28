@@ -10,9 +10,11 @@
       var param = {
         css: [
           staticPath + "main.bundle.css",
+          staticPath + "429.bundle.css",
         ],
         js: [
           staticPath + "main.bundle.js",
+          staticPath + "429.bundle.css",
         ],
         ico: config.staticIco,
       };
