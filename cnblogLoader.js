@@ -9,13 +9,10 @@
 
       var param = {
         css: [
-          staticPath + "css/app.css",
-          staticPath + "css/vendor.css"
+          staticPath + "main.bundle.css",
         ],
         js: [
-          staticPath + "js/vue.js",
-          staticPath + "js/vendor.js",
-          staticPath + "js/app.js",
+          staticPath + "main.bundle.js",
         ],
         ico: config.staticIco,
       };
@@ -65,7 +62,7 @@
       }
   
       $(function() {
-        var app = $("<div id=app></div>");
+        var app = $("<div id=root></div>");
         $("link").remove();
         /*删除所有除头页的消息*/
         $("#home").css("display", "none");

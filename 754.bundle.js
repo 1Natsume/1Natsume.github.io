@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkrspack_project=self.webpackChunkrspack_project||[]).push([["754"],{1169:function(s,e,a){a.r(e),a.d(e,{default:()=>t});var c=a(2800),n=a(3630);let t=()=>(0,c.jsx)("div",{className:"main-layout",children:(0,c.jsx)("main",{className:"content",children:(0,c.jsx)(n.sv,{})})})}}]);
+//# sourceMappingURL=754.bundle.js.map

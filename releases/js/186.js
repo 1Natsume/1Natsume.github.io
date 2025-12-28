@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[186],{6186:(n,a,d)=>{d.r(a),d.d(a,{default:()=>s});var l=d(641),e={id:"blog_cloud_ad"},u=["innerHTML"];var i=d(7118);const r={name:"BlogCloudAd",data:function(){return{adDisplay:i.A.adDisplay}}};const s=(0,d(6262).A)(r,[["render",function(n,a,d,i,r,s){return(0,l.uX)(),(0,l.CE)("div",e,[a[0]||(a[0]=(0,l.Lk)("div",{class:"pub-body-title"},"福利区",-1)),(0,l.Lk)("div",{innerHTML:n.adDisplay},null,8,u)])}]])}}]);
-//# sourceMappingURL=186.js.map
