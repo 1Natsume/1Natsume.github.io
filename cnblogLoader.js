@@ -14,7 +14,7 @@
         ],
         js: [
           staticPath + "main.bundle.js",
-          staticPath + "429.bundle.css",
+          staticPath + "429.bundle.js",
         ],
         ico: config.staticIco,
       };
